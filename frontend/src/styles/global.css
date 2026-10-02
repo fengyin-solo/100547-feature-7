@@ -35,3 +35,28 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* 边坡观测：身份条、任务分派、行内表单、越界与只读标记 */
+.role-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; }
+.role-bar select { padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; }
+.role-hint { color: var(--muted); font-size: 12px; }
+.assign-panel { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.assign-card { flex: 1; min-width: 260px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+.assign-card h3 { margin: 0 0 6px; font-size: 14px; }
+.assign-group { margin: 6px 0 4px; font-size: 12px; color: var(--muted); }
+.assign-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.assign-chip { background: #eef2f7; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+.assign-chip.muted { color: var(--muted); }
+.tag { display: inline-block; border-radius: 4px; padding: 1px 6px; font-size: 12px; margin-left: 6px; }
+.tag.readonly { background: #eef2f7; color: var(--muted); }
+.tag.out-of-range { background: #fef3f2; color: #b42318; }
+tr.out-of-range td { background: #fff7f5; }
+tr.inline-panel td { background: #fbfcfe; }
+.inline-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; padding: 6px 2px; }
+.inline-form.create-form { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.inline-form label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.inline-form input, .inline-form select { padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; }
+.inline-title { align-self: center; font-size: 13px; font-weight: 600; }
+.inline-actions { display: flex; gap: 8px; }
+button[disabled] { opacity: 0.45; cursor: not-allowed; }
+.ok-text { color: #067647; }

@@ -3,7 +3,7 @@
     <header class="page-head">
       <div>
         <h2>削坡减载管理</h2>
-        <p class="page-desc">维护削坡工序，围绕工序编号、所属工程、削坡方量、坡比要求做登记、筛选与状态流转。</p>
+        <p class="page-desc">维护削坡工序，围绕工序编号、所属工程、削坡方量、坡比要求做登记、筛选与状态流转；边坡观测结论会同步成待复核测点。</p>
       </div>
       <div class="page-actions">
         <button class="btn primary" type="button" @click="openCreate">登记削坡工序</button>
@@ -83,8 +83,8 @@ import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('cutting')
 const columns = ["工序编号", "所属工程", "削坡方量", "坡比要求", "开挖高程", "验收日期", "验收人", "工序状态"]
-const actions = ["确认开工", "提交验收", "确认通过"]
-const statuses = ["待开工", "施工中", "待验收", "已验收"]
+const actions = ["复核确认", "确认开工", "提交验收", "确认通过"]
+const statuses = ["待复核", "待开工", "施工中", "待验收", "已验收"]
 const stats = [{"label": "施工中工序", "value": 0}, {"label": "待验收工序", "value": 0}, {"label": "累计削坡方量", "value": 0}]
 
 const rows = ref<EntryRow[]>([])
