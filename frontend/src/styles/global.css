@@ -35,3 +35,13 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+.head-switch { display: flex; gap: 12px; align-items: center; font-size: 12px; }
+.head-switch select { margin-left: 4px; padding: 2px 6px; border: 1px solid var(--border); border-radius: 6px; }
+.filter-item input, .filter-item select { padding: 4px 6px; border: 1px solid var(--border); border-radius: 6px; }
+.edit-panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.edit-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 10px; }
+.edit-grid label span { display: block; font-size: 12px; color: var(--muted); }
+.edit-grid input, .edit-grid select { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; }
+.edit-actions { display: flex; gap: 8px; }
+.readonly-tag { background: #fef0c7; color: #93370d; border-radius: 999px; padding: 2px 8px; font-size: 12px; white-space: nowrap; }
+.notice-text { color: #067647; }

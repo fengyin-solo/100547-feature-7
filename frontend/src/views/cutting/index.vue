@@ -82,7 +82,7 @@ import {
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('cutting')
-const columns = ["工序编号", "所属工程", "削坡方量", "坡比要求", "开挖高程", "验收日期", "验收人", "工序状态"]
+const columns = ["工序编号", "所属工程", "削坡方量", "坡比要求", "开挖高程", "验收日期", "验收人", "工序状态", "来源测点"]
 const actions = ["确认开工", "提交验收", "确认通过"]
 const statuses = ["待开工", "施工中", "待验收", "已验收"]
 const stats = [{"label": "施工中工序", "value": 0}, {"label": "待验收工序", "value": 0}, {"label": "累计削坡方量", "value": 0}]

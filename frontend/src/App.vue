@@ -11,6 +11,20 @@
     <main class="app-main">
       <header class="app-head">
         <span class="head-desc">面向隐患点建档、坡体形变与裂缝观测、雨量预警发布、避险搬迁与治理工程验收的山区地质灾害防治工作台。</span>
+        <span class="head-switch">
+          <label>
+            值班角色
+            <select v-model="store.role">
+              <option v-for="role in SLOPE_ROLES" :key="role" :value="role">{{ role }}</option>
+            </select>
+          </label>
+          <label v-if="store.role === '片区观测人'">
+            片区
+            <select v-model="store.area">
+              <option v-for="area in SLOPE_AREAS" :key="area" :value="area">{{ area }}</option>
+            </select>
+          </label>
+        </span>
         <span class="head-user">当前值班：{{ store.operator }} · {{ store.shiftLabel }}</span>
       </header>
       <RouterView />
@@ -19,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+import { SLOPE_AREAS, SLOPE_ROLES } from '@/data/slope-rules'
 import { useSessionStore } from '@/stores/session'
 
 const store = useSessionStore()
